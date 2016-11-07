@@ -1,1 +1,14 @@
+# git
+#
+
 ---
+- name: Deply hello-ancible host
+  hosts: hello-ancible-prod-servers
+  become: true
+  user: krazedkrish
+
+  tasks:
+    - name: install / nginx
+      pacman:
+        name: nginx
+        state: present
